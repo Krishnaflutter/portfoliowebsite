@@ -2,8 +2,10 @@
 
 .addWriting{
     font-family: 'Dancing Script', cursive!important;
+    font-size : 1.5rem!important;
     flex-grow: 1;
-    margin-left: 39vw!important;
+    color: tomato!important;
+    margin-left: 1vw!important;
 }
 
 .navigation-links{
@@ -17,7 +19,7 @@
         background: transparent;
         border: none;
         padding: 0;
-        left: 1.5rem;
+        right: 1.5rem;
         top: 20px;
     }
     &:focus{
@@ -28,7 +30,6 @@
     .bar-three{
         width: 1.5rem;
         height: 0.2rem;
-        background:tomato;
         border-radius:10px;
         transition: all 0.4s linear;
         position: relative;
@@ -37,25 +38,72 @@
 
     .bar-one{
         transform:rotate(0);
+        background:tomato;
     }
     .bar-two{
         opacity: 1;
         transform:translateX(0);
+        background:tomato;
     }
     .bar-three{
         transform:rotate(0);
+        background:tomato;
     }
 }
 .open{
     .bar-one{
         transform:rotate(45deg);
+        background:dimgray;
     }
     .bar-two{
         opacity: 0;
-        transform:translateX(-30px);
+        transform:translateX(30px);
+        background:dimgray;
     }
     .bar-three{
         transform:rotate(-45deg);
+        background:dimgray;
     }
     
+}
+
+.mobile-nav-wrapper {
+    z-index: -1;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    background-color: tomato;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top:0px;
+    right:0px;
+    backdrop-filter: blur(0.625rem);
+
+    opacity: 0;
+    visibility: hidden;
+    height: 0%;
+    transition: opacity 0.75s , visibility 0.75s , height 0.75s;
+    overflow: hidden;
+}
+
+.mobile-nav-wrapper.open{
+    opacity: 1;
+    visibility: visible;
+    height: 100vh; 
+}
+
+.menu-link {
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 2rem;
+    color: #333;
+    font-weight: bolder;
+    padding: 0.5rem;
+    border-radius: 3px;
+    margin: 0 0.5rem;
+}
+.menu-link:hover{
+    color: white;
 }

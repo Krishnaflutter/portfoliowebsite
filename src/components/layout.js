@@ -14,7 +14,7 @@ function Layout(props) {
 
     const theme = createTheme({
         palette: {
-        type: dark?"dark":"light",
+        type: "dark",
         }
     });
   
