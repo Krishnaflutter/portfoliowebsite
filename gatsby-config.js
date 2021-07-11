@@ -3,5 +3,5 @@ module.exports = {
     siteUrl: "https://www.yourdomain.tld",
     title: "Krishna Ashok",
   },
-  plugins: [],
+  plugins: [`gatsby-plugin-sass`],
 };

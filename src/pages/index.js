@@ -12,7 +12,6 @@ import Layout from '../components/layout'
 const IndexPage = () => {
   return (
     <Layout>
-      <hi>Hello Krishna</hi>
     </Layout>
   )
 }
