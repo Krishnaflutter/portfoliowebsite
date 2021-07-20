@@ -1,18 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
 
-
+$basic:#b788f8;
+$darkicon:#2e2e2e;
 
 .addWriting{
     font-family: 'Dancing Script', cursive!important;
     font-size : 1.5rem!important;
     flex-grow: 1;
-    color: tomato!important;
+    color: #b788f8!important;
     margin-left: 1vw!important;
     cursor: pointer;
 }
 
 .navigation-links{
     margin-right: 7px;
+    z-index: 1;
     .nav-ham-menu{
         display: flex;
         flex-direction: column;
@@ -42,37 +44,41 @@
 
     .bar-one{
         transform:rotate(0);
-        background:tomato;
+        background:$basic;
     }
     .bar-two{
         opacity: 1;
         transform:translateX(0);
-        background:tomato;
+        background:$basic;
     }
     .bar-three{
         transform:rotate(0);
-        background:tomato;
+        background:$basic;
     }
 }
 .open{
     .bar-one{
         transform:rotate(45deg);
+        background:$darkicon;
     }
     .bar-two{
         opacity: 0;
         transform:translateX(30px);
+        background:$darkicon;
     }
     .bar-three{
         transform:rotate(-45deg);
+        background:$darkicon;
     }
 }
 
 .mobile-nav-wrapper {
-    z-index: -1;
+    z-index: 0;
     width: 100vw;
     display: flex;
     flex-direction: column;
-    background-color:#ffb6c1;
+    // background-color:#ffb6c1;
+    background-color:#b788f8;
     align-items: center;
     justify-content: center;
     position: fixed;
