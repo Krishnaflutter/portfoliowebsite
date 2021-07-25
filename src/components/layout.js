@@ -2,7 +2,7 @@ import React , {useState } from 'react';
 import { createTheme, ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Navbar from './navbar'
-import Footer from './footer'
+// import Footer from './footer'
 
 function Layout(props) {
 //   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
@@ -25,7 +25,7 @@ function Layout(props) {
         <CssBaseline/>
         <Navbar setDark={setDark} dark={dark}/>
             {props.children?props.children:<></>}
-        <Footer />    
+        {/* <Footer />     */}
         </ThemeProvider>
     );
 }

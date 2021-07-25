@@ -1,15 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 
-$basic:#b788f8;
+$basic:#3cfff5;
 $darkicon:#2e2e2e;
+$nunito:'Nunito', sans-serif;
 
 .addWriting{
     font-family: 'Dancing Script', cursive!important;
     font-size : 1.5rem!important;
     flex-grow: 1;
-    color: #b788f8!important;
+    color: $basic!important;
     margin-left: 1vw!important;
-    cursor: pointer;
+    cursor: default;
+}
+.basic{
+    color: #00e0ca;
+}
+
+.awsicon{
+    font-size: 2.5rem!important;
+    color: #5bffef;
+    transition: all 0.4s linear;
+    perspective: 500px;
+}
+.awsicon:hover{
+    transform: scale(1.1);
+    color:white;
+}
+
+.textheaders{
+    font-family: $nunito!important;
+    // font-size: 2.5rem!important;
+    cursor: default;
 }
 
 .navigation-links{
@@ -59,26 +81,27 @@ $darkicon:#2e2e2e;
 .open{
     .bar-one{
         transform:rotate(45deg);
-        background:$darkicon;
+        background:$basic;
     }
     .bar-two{
         opacity: 0;
         transform:translateX(30px);
-        background:$darkicon;
+        background:$basic;
     }
     .bar-three{
         transform:rotate(-45deg);
-        background:$darkicon;
+        background:$basic;
     }
 }
 
 .mobile-nav-wrapper {
-    z-index: 0;
-    width: 100vw;
+    z-index: 50;
+    width: 100vw; 
     display: flex;
     flex-direction: column;
     // background-color:#ffb6c1;
-    background-color:#b788f8;
+    // background-color:#b788f8;
+    background-color: #8ef7ff;
     align-items: center;
     justify-content: center;
     position: fixed;
@@ -113,3 +136,11 @@ $darkicon:#2e2e2e;
 .menu-link:hover{
     color: white;
 }
+
+// .from-gray-900 {
+//     --tw-gradient-from: #302f2f;
+//     --tw-gradient-stops: var(--tw-gradient-from),var(--tw-gradient-to,rgba(17,24,39,0));
+// }
+// .bg-gradient-to-b {
+//     background-image: linear-gradient(to bottom,var(--tw-gradient-stops));
+// }

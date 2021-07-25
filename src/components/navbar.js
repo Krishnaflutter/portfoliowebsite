@@ -28,12 +28,8 @@ export default function MenuAppBar(props) {
     })
     return (
         <div className={classes.root}>
-        <AppBar position="static" color="transparent" elevation="0">
+        <AppBar position="fixed"  elevation="0" style={{backgroundColor:'#333'}} >
             <Toolbar>
-            {/* <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-                <MenuIcon />
-            </IconButton> */}
-            
                 <Typography className="addWriting">
                     Krishna Ashok
                 </Typography>
@@ -41,6 +37,7 @@ export default function MenuAppBar(props) {
                     <button
                         aria-label="menu button"
                         className={active}
+                        style={{zIndex:'100'}}
                         onClick={()=> setNavMenuOpen(!navMenuOpen)}
 
                     >

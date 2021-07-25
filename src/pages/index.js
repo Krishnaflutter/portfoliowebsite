@@ -1,5 +1,8 @@
-import * as React from "react"
+import React,{useEffect} from "react"
 import Layout from '../components/layout'
+import Intro from '../components/introduction'
+import "../.././node_modules/locomotive-scroll/src/locomotive-scroll.scss";
+import LocomotiveScroll from "locomotive-scroll";
 
 // styles
 // const pageStyles = {
@@ -10,8 +13,20 @@ import Layout from '../components/layout'
 
 // markup
 const IndexPage = () => {
+  const scrollRef = React.createRef();
+
+  useEffect(() => {
+    const scroll = new LocomotiveScroll({
+      el: scrollRef.current,
+      smooth: true
+    });
+  },[]);
   return (
     <Layout>
+      <div data-scroll-container ref={scrollRef}>
+        <Intro name={"Krishna Ashok"}/>
+        <Intro />  
+      </div>
     </Layout>
   )
 }
