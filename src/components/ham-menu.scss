@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 
+$lightBasic:#99fff5;
 $basic:#3cfff5;
 $darkicon:#2e2e2e;
 $nunito:'Nunito', sans-serif;
@@ -16,16 +17,34 @@ $nunito:'Nunito', sans-serif;
 .basic{
     color: #00e0ca;
 }
+.btn{
+    background: linear-gradient(
+        90deg
+        ,#00a393,#99fff5 50%);
+}
+.btn:hover{
+    background: linear-gradient(
+        90deg,
+        #99fff5 50%,#00a393);    
+}
+.otlbutton{
+    transition: all 0.3s linear;
+    // font-size: 1rem!important;
+}
+.otlbutton:hover{
+    background-color: $lightBasic!important;
+    border-color: $lightBasic!important;
+    color: $darkicon;
+}
 
 .awsicon{
-    font-size: 2.5rem!important;
-    color: #5bffef;
-    transition: all 0.4s linear;
-    perspective: 500px;
+    font-size: 3rem!important;
+    color: white;
+    margin-right: 2.2rem;
+    transition: all 0.3s linear;
 }
 .awsicon:hover{
-    transform: scale(1.1);
-    color:white;
+    transform: scale(1.05);
 }
 
 .textheaders{
@@ -96,7 +115,7 @@ $nunito:'Nunito', sans-serif;
 
 .mobile-nav-wrapper {
     z-index: 50;
-    width: 100vw; 
+    width: 100%; 
     display: flex;
     flex-direction: column;
     // background-color:#ffb6c1;
@@ -119,7 +138,7 @@ $nunito:'Nunito', sans-serif;
 .mobile-nav-wrapper.open{
     opacity: 1;
     visibility: visible;
-    height: 100vh;
+    height: 100%;
 }
 
 .menu-link {

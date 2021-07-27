@@ -1,5 +1,6 @@
 import React,{useEffect} from "react"
 import Layout from '../components/layout'
+import ColorDiv from '../components/colorFull'
 import Intro from '../components/introduction'
 import "../.././node_modules/locomotive-scroll/src/locomotive-scroll.scss";
 import LocomotiveScroll from "locomotive-scroll";
@@ -18,14 +19,16 @@ const IndexPage = () => {
   useEffect(() => {
     const scroll = new LocomotiveScroll({
       el: scrollRef.current,
-      smooth: true
+      smooth: true,
+      reloadOnContextChange:true,
+      gestureDirection:'both'
     });
   },[]);
   return (
     <Layout>
       <div data-scroll-container ref={scrollRef}>
         <Intro name={"Krishna Ashok"}/>
-        <Intro />  
+        <ColorDiv />  
       </div>
     </Layout>
   )
